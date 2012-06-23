@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tutoria</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <head>
+    <title>Tutoria!</title>
 
-</body>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    
+    <%= render "layouts/forIE" %>
+
+  </head>
+
+  <body>
+  
+    <%= render "layouts/header" %>
+
+    <div class="wrapper">
+      <div class="container">
+      
+    <%= yield %>
+    
+      </div>
+      <!-- END .container -->
+      <div class="push"><!-- For sticky footer --></div>
+    </div>
+    <!-- END .wrapper -->
+    
+    <%= render "layouts/footer" %>
+    
+  </body>
 </html>

@@ -1,0 +1,38 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner"> 
+    <div class="container-fluid">
+
+      <%= link_to "Tutoria!", root_path, class:"brand" %>
+      
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      
+      <div class="btn-group pull-right">                           
+        <button class="btn dropdown-toggle" data-toggle="dropdown" href="/">
+            <i class="icon-user"></i> uplaabura
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li class="divider"></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </div>
+      <!-- END .btn-group .pull-right-->
+ 
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Home", "#" %></li>
+          <li><%= link_to "Tutoria!", "#" %></li>
+        </ul>
+      </div>
+      <!-- END .nav-collapse -->
+    </div>
+    <!-- END .container-fluid -->
+  </div>
+  <!-- END .navbar-inner -->
+</header>
