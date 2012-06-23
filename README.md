@@ -4,3 +4,4 @@
 
 ######Editor-
 - choose review links in a popup window.
+- bookmark tags
