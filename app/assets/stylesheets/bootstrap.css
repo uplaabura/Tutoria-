@@ -8,6 +8,22 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+ 
+/* padding hero units */
+.wrapper > .container {
+    padding-top: 60px;
+}
+
+/* twitter-bootstrap */
 article,
 aside,
 details,
@@ -39,12 +55,6 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-
-/* padding hero units */
-.wrapper > .container {
-    padding-top: 60px;
-}
-/* END padding hero units */
 
 a:focus {
   outline: thin dotted #333;

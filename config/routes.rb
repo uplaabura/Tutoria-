@@ -1,8 +1,7 @@
 Tutoria::Application.routes.draw do
 
-
-  match "/", to:"home#index"
-  match "/start", to:"users#start"
+  resources :users
+    match "/start", to:"users#start"
 
   resources :microposts
 
@@ -64,3 +63,4 @@ Tutoria::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   root :to => 'Home#index'
 end
+
