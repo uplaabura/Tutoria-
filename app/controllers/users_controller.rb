@@ -4,16 +4,17 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.new(params[:user]) #this "params" is from html forms
     if @user.save
-      #save succeed
+      flash[:success] = "Welcome to Tutoria!"
+      redirect_to @user
     else
       render "start"
     end
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:id]) #this "params" is for querying
   end
 
 end

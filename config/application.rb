@@ -52,8 +52,12 @@ module Tutoria
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    #config.assets.paths << "/home/uplaabura/.rvm/gems/ruby-1.9.3-p194/gems/anjlab-bootstrap-rails-2.0.4.1/vendor/assets/stylesheets"
+    #config.assets.paths << "/home/uplaabura/.rvm/gems/ruby-1.9.3-p194/gems/anjlab-bootstrap-rails-2.0.4.1/vendor/assets/javascripts"
+    #config.assets.paths << "/home/uplaabura/.rvm/gems/ruby-1.9.3-p194/gems/anjlab-bootstrap-rails-2.0.4.1/vendor/assets/images"
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
 end
+

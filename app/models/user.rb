@@ -4,17 +4,17 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password
 
-  validates :name,  presence: true,
-                    uniqueness: true,
-                    length: {in: 3..20}
-  validates :email, presence: true,
-                    uniqueness: {case_sensitive: false},
-                    format: EMAIL_REGEX
-  validates :password,  presence: true,
-                        length: {in: 4..20}
-  validates :password_confirmation, presence: true
+  validates :name,  :presence => true,
+                    :uniqueness => true,
+                    :length => { :in => 3..20 }
+  validates :email, :presence => true,
+                    :uniqueness => { :case_sensitive => false },
+                    :format => EMAIL_REGEX
+  validates :password,  :presence => true,
+                        :length => {in: 4..20}
+  validates :password_confirmation, :presence => true
 
-  before_save {|user| user.email = email.downcase}
+  before_save { |user| user.email = email.downcase }
 
 end
 # == Schema Information

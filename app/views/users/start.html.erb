@@ -1,25 +1,35 @@
 <div class="row">
-  <div class="span6 leftside center">
-    <h1>Sign up</h1>
-    <%= form_for(@user) do |signup_form| %>
+  <div class="span6 leftside">
+    <div class="row">
+      <div class="span4 offset1">
+
+        <%= render "shared/error_messages" %>
       
-      <%= signup_form.label :name %>
-      <%= signup_form.text_field :name %>
-    
-      <%= signup_form.label :email %>
-      <%= signup_form.text_field :email %>
-    
-      <%= signup_form.label :password %>
-      <%= signup_form.password_field :password %>
+        <h1>Sign up</h1>
+      
+        <%= form_for(@user) do |signup_form| %>
+        
+          <%= signup_form.label :name %>
+          <%= signup_form.text_field :name %>
+        
+          <%= signup_form.label :email %>
+          <%= signup_form.text_field :email %>
+        
+          <%= signup_form.label :password %>
+          <%= signup_form.password_field :password %>
 
-      <%= signup_form.label :password_confirmation %>
-      <%= signup_form.password_field :password_confirmation %>
-      <br/>
-      <%= signup_form.submit "Start!", class:"btn btn-large btn-primary" %>
+          <%= signup_form.label :password_confirmation %>
+          <%= signup_form.password_field :password_confirmation %>
 
-    <% end %>
+          <%= signup_form.submit "Start!", class:"btn btn-large btn-primary" %>
 
+        <% end %>
+
+      </div>
+      <!-- END .span4 .offset1 -->  
+    </div>
+      <!-- END .row -->
   </div>
   <!-- END .span6 .leftside -->
 </div>
-<!-- END .row -->
+<!-- END .row -->   
