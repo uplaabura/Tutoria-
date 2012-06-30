@@ -26,6 +26,6 @@ Then /^show the user profile page$/ do
 end
 
 Then /^show the signout link$/ do
-	page.should have_link("Sign out")
+	page.should have_selector("a", :content => "Sign out", :href => signout_path)
 end
 
