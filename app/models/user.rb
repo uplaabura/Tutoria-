@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
-
-  EMAIL_REGEX = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[A-Z]{2,4}$/i
   attr_accessible :name, :email, :password, :password_confirmation
-  has_secure_password
-
+  
+  has_secure_password #this is a ActiveModel helper for storing "password_digest"
+  
+  #constants and definitions
+  EMAIL_REGEX = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[A-Z]{2,4}$/i
+  
+  #validations
   validates :name,  :presence => true,
                     :uniqueness => true,
                     :length => { :in => 3..20 }
@@ -14,8 +17,16 @@ class User < ActiveRecord::Base
                         :length => {in: 4..20}
   validates :password_confirmation, :presence => true
 
+  #callback functions
   before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
 
+  #private functions
+  private
+    def create_remember_token
+      # I think it's equal to User.remember_token?
+      self.remember_token = SecureRandom.urlsafe_base64 
+    end
 end
 # == Schema Information
 #

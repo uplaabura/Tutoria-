@@ -35,6 +35,9 @@ h1 {
 // layouts basic rules
 html {
   height: 100%;
+  body {
+    height: 100%;
+  }
 }
 
 .center {
@@ -156,11 +159,8 @@ aside {
 }
 
 // start! form
-.leftside {
+.sidebyside {
   border-right: 1px solid $grayLight;
-}
-
-.rightside {
   border-left: 1px solid $grayLight;
 }
 

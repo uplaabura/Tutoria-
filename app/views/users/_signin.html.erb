@@ -1,0 +1,11 @@
+<h1>Sign in</h1>
+
+  <%= form_for(:session, :url => sessions_path) do |signin_form| %>
+    <%= signin_form.label :email %>
+    <%= signin_form.text_field :email %>
+
+    <%= signin_form.label :password %>
+    <%= signin_form.password_field :password %>
+
+    <%= signin_form.submit "Sign in!", class:"btn btn-large btn-primary" %>
+  <% end %>

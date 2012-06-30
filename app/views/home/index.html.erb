@@ -1,9 +1,15 @@
 <div class="hero-unit center">
   <h1>Tutoria!</h1>
   <h2>This is the easiest tutorial writting/reading web app.<br/>
-    <%= link_to "Try the demo", root_path, class:"btn btn-large btn-primary" %> 
-      or just
-    <%= link_to "Start! Join us!", start_path, class:"btn btn-large btn-primary"%>  
+    <%= link_to "Try the demo", root_path, :class => "btn btn-large btn-primary" %>
+    or just
+    
+    <% if signed_in? %>
+    	<%= link_to "Start!", user_path(current_user), :class => "btn btn-large btn-primary" %> 
+    	<% else %>    
+    	<%= link_to "Start!", start_path, :class => "btn btn-large btn-primary" %> 
+    <% end %>
+  
   </h2>
 </div>
 <!-- END .hero-unit .center -->

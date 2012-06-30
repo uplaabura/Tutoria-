@@ -10,6 +10,12 @@ group :development do
   gem 'annotate', '~> 2.4.1.beta' 
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', require: false 
+  gem 'database_cleaner'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -1,9 +1,11 @@
 Tutoria::Application.routes.draw do
 
   resources :users
-    match "/start", to:"users#start"
+    match "/start", :to => "users#start"
 
-  resources :microposts
+  resources :sessions, :only => [:create, :destroy]
+    match "/signout", :to => "sessions#destroy", :via => :delete 
+    #via => delete means it's invoked using http DELETE request
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

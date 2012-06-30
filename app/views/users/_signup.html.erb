@@ -1,0 +1,17 @@
+<h1>Sign up</h1>
+
+  <%= form_for(@user) do |signup_form| %>
+    <%= signup_form.label :name %>
+    <%= signup_form.text_field :name %>
+  
+    <%= signup_form.label :email %>
+    <%= signup_form.text_field :email %>
+  
+    <%= signup_form.label :password %>
+    <%= signup_form.password_field :password %>
+
+    <%= signup_form.label :password_confirmation %>
+    <%= signup_form.password_field :password_confirmation %>
+
+    <%= signup_form.submit "Start!", class:"btn btn-large btn-primary" %>
+  <% end %>
